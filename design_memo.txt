@@ -1,0 +1,14 @@
+Design Memo
+-----------
+
+Why is a stack the right choice for undo and redo?
+
+A stack works by storing the most recent action on top, so when a user wants to undo something, the last action can be quickly removed. This is called "last in, first out" — the last action is the first one taken away. When a user redoes an action, it is added back in the same order. This behavior matches exactly what undo and redo features need to do, which makes a stack the perfect tool for this job.
+
+Why is a queue better for the help desk?
+
+A queue is "first in, first out" — the first customer to enter the line is the first to be helped. This is the same way real-life lines work, like waiting at a store or bank. For a help desk system, this makes sure customers are treated fairly and in the order they asked for help. That is why a queue is the best choice for handling support tickets.
+
+How is this different from using Python's list?
+
+Python lists can do similar things, but they are not as efficient for stacks and queues. Removing the first item from a list is slow because all the other items have to shift over. Our custom stack and queue use simple linked nodes, which makes adding and removing items fast and consistent. This helps the program run better, especially when there are lots of actions or customers.
